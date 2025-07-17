@@ -1,0 +1,26 @@
+2025-07-17 04:15:57,351 - __main__ - INFO - Запуск бота...
+2025-07-17 04:15:57,398 - __main__ - INFO - Модуль 'main_menu' загружен
+2025-07-17 04:15:57,411 - __main__ - INFO - Модуль 'clients' загружен
+2025-07-17 04:15:57,414 - __main__ - ERROR - Ошибка в модуле admin: invalid syntax. Perhaps you forgot a comma? (handlers.py, line 246)
+Traceback (most recent call last):
+  File "/root/kandrytaxi/main.py", line 37, in load_module
+    module = import_module(f"modules.{module_name}")
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/kandrytaxi/modules/admin/__init__.py", line 1, in <module>
+    from .main import setup
+  File "/root/kandrytaxi/modules/admin/main.py", line 1, in <module>
+    from .handlers import router
+  File "/root/kandrytaxi/modules/admin/handlers.py", line 246
+    await message.answer(UPDATE_ERROR.format(error=e), reply_markup=admin_kb()
+                                                                    
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+2025-07-17 04:15:57,471 - __main__ - INFO - Бот запущен (модулей: 2)
+2025-07-17 04:15:57,471 - aiogram.dispatcher - INFO - Start polling
+2025-07-17 04:15:57,487 - aiogram.dispatcher - INFO - Run polling for bot @KandryTaxiBot id=7574386856 - 'BOT Кандры Форсаж'

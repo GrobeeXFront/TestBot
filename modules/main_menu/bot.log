@@ -1,0 +1,45 @@
+2025-07-17 12:20:38,749 - __main__ - INFO - Запуск бота...
+2025-07-17 12:20:38,795 - __main__ - INFO - Модуль 'main_menu' загружен
+2025-07-17 12:20:38,811 - __main__ - INFO - Модуль 'orders' загружен
+2025-07-17 12:20:38,879 - __main__ - INFO - Бот запущен (модулей: 2)
+2025-07-17 12:20:38,880 - aiogram.dispatcher - INFO - Start polling
+2025-07-17 12:20:38,901 - aiogram.dispatcher - INFO - Run polling for bot @KandryTaxiBot id=7574386856 - 'BOT Кандры Форсаж'
+2025-07-17 12:20:41,400 - aiogram.event - INFO - Update id=101721671 is not handled. Duration 0 ms by bot id=7574386856
+2025-07-17 12:20:41,400 - aiogram.event - ERROR - Cause exception while process update id=101721671 by bot id=7574386856
+NameError: name 'ReplyKeyboardRemove' is not defined
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+  File "/root/kandrytaxi/modules/main_menu/handlers.py", line 22, in order_taxi_handler
+    reply_markup=ReplyKeyboardRemove()  # Убираем клавиатуру main_menu
+NameError: name 'ReplyKeyboardRemove' is not defined
