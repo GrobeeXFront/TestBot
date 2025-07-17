@@ -44,8 +44,8 @@ class Config:
     # Модули
     MODULES: Dict[str, bool] = {
         "main_menu": True,
-        "clients": False,
-        "orders": True,
+        "clients": True,
+        "orders": False,
         "admin": False,
         "errors": False
     }
